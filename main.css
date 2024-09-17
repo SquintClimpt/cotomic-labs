@@ -15,3 +15,14 @@
   width: 100%;
   z-index: 10001;
 }
+
+#header > .logo {
+  display: inline-block;
+	height: inherit;
+	left: 1.25em;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+		}
