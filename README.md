@@ -1,1 +1,1 @@
-CTMLab.github.io
+ctmLab.github.io
