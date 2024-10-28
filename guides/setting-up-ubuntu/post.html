@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html></html>
+    <head>
+        <title>Cotomic Labs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+    </head>
+    <body>
+        <!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="../../index.html">Cotomic Labs<span></span></a></div>
+			<a href="#menu"></a>
+		</header>
+
+		<!-- Nav Sidebar-->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../projects.html">Projects</a></li>
+				<li><a href="../../contact.html">Contact</a></li>
+				<li><a href="../../about.html">About</a></li>
+			</ul>	
+		</nav>
+
+        <!-- Banner -->
+		 <section class="banner-section">
+			<img class="banner-image" src="../../assets/images/banner_gradient_01.png" alt=""/>
+			<div class="banner-text">
+				<p>Guides</p>
+			</div>
+		</section>
+
+        <!-- Blog -->
+		<section class="blog">
+			<div class="blog-container">
+				<div id="setting-up-ubuntu-24.04-for-the-lab" class="section level1">
+                    <h1>Setting up Ubuntu (24.04) for the lab</h1>
+                    <div id="clint-mccue" class="section level3">
+                    <h3>Clint McCue</h3>
+                    </div>
+                    <div id="section" class="section level3">
+                    <h3>10/27/2024</h3>
+                    </div>
+                    <div id="considerations" class="section level2">
+                    <h2>Considerations</h2>
+                    <p>The official tutorial for the installation of Ubuntu
+                    can be found <a
+                    href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview">here</a>.
+                    This tutorial has many parallels to the official tutorial,
+                    with a few additions to aspects of the installation that
+                    may be particularly difficult.</p>
+                    </div>
+                    <div id="download-ubuntu-iso" class="section level2">
+                    <h2>1. Download Ubuntu ISO</h2>
+                    <p>First we want to download the ISO for Ubuntu 24.04 from
+                    the official Ubuntu <a
+                    href="https://ubuntu.com/download/desktop#release-notes">site</a>.</p>
+                    </div>
+                    <div id="creating-a-bootable-usb-flash-drive"
+                    class="section level2">
+                    <h2>2. Creating a bootable USB flash drive</h2>
+                    <p>Next we need to create a bootable flash drive with ISO
+                    using an application like <a
+                    href="https://rufus.ie/en/">rufus</a> or <a
+                    href="https://etcher.balena.io/">balenaEtcher</a>. I
+                    prefer to use rufus but the functionality is virtually the
+                    same between each. I would also recommend using a 32GB or
+                    larger USB flash drive as the boot device.</p>
+                    </div>
+                    <div id="installing-ubuntu-via-bootable-flash-drive"
+                    class="section level2">
+                    <h2>3. Installing Ubuntu via Bootable flash drive</h2>
+                    <p>Now that we have a live boot USB loaded with Ubuntu,
+                    plug the flash drive into a USB port on the device to be
+                    loaded with Ubuntu. Usually any USB port will work but on
+                    some devices only USB ports mounted on the motherboard
+                    work on startup.</p>
+                    </div>
+                    <div id="navigating-the-install-menu"
+                    class="section level2">
+                    <h2>4. Navigating the Install Menu</h2>
+                    <p>Once the USB is plugged in, start up the PC. The Ubuntu
+                    splash screen should show and after a minute or two a
+                    “type of installation” window will appear. I usually
+                    choose interactive installation as it is easier to use the
+                    GUI rather than make changes to a config file like an
+                    “autoinstall.yml”.</p>
+                    <p><img src="figure_1.jpeg" /></p>
+                    <p>Next a prompt will appear that asks whether you would
+                    like to install additional apps or stick with the default
+                    selection of apps. I would recommend sticking with the
+                    default installation and adding apps as you go. This will
+                    ensure that the bare install only includes the necessary
+                    software needed to run the operating system.</p>
+                    <p><img src="figure_2.jpeg" /></p>
+                    <p>The next prompt is for the install of proprietary,
+                    third party drivers and support software. Since drivers
+                    can be difficult to procure and diagnosing issues related
+                    to missing support functions can be enough to make a
+                    person tear their hair out, I recommend checking both
+                    boxes.</p>
+                    <p><img src="figure_3.jpeg" /></p>
+                    <p>Now that we have made the necessary modifications to
+                    the configuration of the operating system, the next prompt
+                    will ask how we want to install Ubuntu onto the
+                    system.</p>
+                    <p><img src="figure_4.jpeg" /></p>
+                    <p>We can either choose to reformat the disk and install
+                    the OS, or we can manually install using a customized disk
+                    setup. If you are looking to install Ubuntu alongside
+                    another OS like windows or MacOS, follow this <a
+                    href="https://help.ubuntu.com/community/WindowsDualBoot">link</a>
+                    for help. If you chose the “erase disk and install Ubuntu”
+                    option or you have successfully made a new drive partition
+                    to hold Ubuntu, you can either continue to the account
+                    creation step or visit the advanced settings prompt to
+                    choose security features, more on that <a
+                    href="https://ubuntu.com/tutorials/install-ubuntu-desktop#6-type-of-installation">here</a>.</p>
+                    </div>
+                    <div id="login-details" class="section level2">
+                    <h2>5. Login Details</h2>
+                    <p>At this stage, a local user account needs to be made.
+                    Choose an easy to remember name for the computer as this
+                    is what will show up on the local network. The username
+                    for the user account is the name that will be used for any
+                    actions involving the user, including any work done within
+                    the ubuntu terminal.</p>
+                    <p><img src="figure_5.jpeg" /></p>
+                    </div>
+                    <div id="location" class="section level2">
+                    <h2>6. Location</h2>
+                    <p>This prompt is relatively self explanatory, choose your
+                    location and timezone for accurate date and time
+                    recording, or don’t, it is up to you.</p>
+                    <p><img src="figure_6.jpeg" /></p>
+                    </div>
+                    <div id="review-install-configuration"
+                    class="section level2">
+                    <h2>7. Review Install Configuration</h2>
+                    <p>At this juncture, take a minute to review the choices
+                    made so far, once confirmed, click the install button in
+                    the bottom right corner and wait for the install to
+                    complete!</p>
+                    <p><img src="figure_7.jpeg" /></p>
+                    </div>
+                    <div id="after-installation" class="section level2">
+                    <h2>8. After Installation</h2>
+                    <p>Wait until the “Ubuntu is installed and ready to use”
+                    prompt appears, then click restart now. On restart, there
+                    will be a message to remove the USB flash drive from the
+                    device, do so and press enter to continue. Then log in
+                    using the username and password credentials that were
+                    input on installation.</p>
+                    <p>Congratulations! You’ve successfully installed a bare
+                    bones, but functional Ubuntu distribution. If you were
+                    following this guide as a prerequisite to getting started
+                    with k3s for the lab, follow this <a
+                    href="blogs/setting-up-k3s.html">link</a>.</p>
+                    </div>
+                </div>
+		    </div>
+		</section>
+
+        <!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="" target="_blank" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/SquintClimpt" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				&copy; Cotomic Labs. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Scripts-->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/skel.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+    </body>
+</html>

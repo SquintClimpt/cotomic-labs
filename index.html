@@ -1,221 +1,131 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>ctm-lab</title>
+    <head>
+        <title>Cotomic Labs</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
+    </head>
+    <body>
+        <!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="index.html">Cotomic Labs<span></span></a></div>
+			<a href="#menu"></a>
+		</header>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">ctm-lab<span></span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="research.html">Research</a></li>
-					<li><a href="resources.html">Resources</a></li>
-					<!-- <li><a href="latest_news.html">Latest News</a></li> -->
-					<li><a href="publications.html">Publications</a></li>
-					<!-- <li><a href="social_media.html">Social Media</a></li> -->
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+		<!-- Nav Sidebar-->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="guides.html">Guides</a></li>	
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>	
+		</nav>
 
 		<!-- Banner -->
-			<section class="banner full">
-				<article>
-					<img src="images/slide01.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Header Loading ...</p>
-							<h2></h2>
-						</header>
+		 <section class="banner-section">
+			<img class="banner-image" src="assets/images/banner_gradient_01.png" alt=""/>
+			<div class="banner-text">
+				<p>Demystifying Discovery</p>
+			</div>
+		</section>
+
+		<!-- Grid One -->
+		<section id="one" class="grid-one">
+			<div class="grid-container">
+					<div class="grid-heading">
+						<p>Featured Guides</p>
+						<hr/>
 					</div>
-				</article>
-				<article>
-					<img src="images/slide02.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Header Loading ...</p>
-							<h2></h2>
-						</header>
+				<ul class="grid-style">
+					<li class="grid-box">
+						<a href="guides/setting-up-ubuntu/post.html">
+							<div class="box-padding">
+								<img class="grid-image" src="assets/images/Ubuntu-logo-2022.png" alt=""/>
+								<hr/>
+								<h1>Setting up Ubuntu for the Lab</h1>
+								<p>Ubuntu offers a stable environment perfect for research labs. 
+									Its compatibility with a wide range of scientific software 
+									makes it an ideal choice for various lab applications.</p>
+							</div>
+						</a>
+					</li>
+					<li class="grid-box">
+						<a href="guide_1.html">
+							<div class="box-padding">
+								<img class="grid-image" src="assets/images/k3s-logo-2024.png" alt=""/>
+								<hr/>
+								<h1>Setting up K3S for the Lab</h1>
+								<p>K3s is a lightweight, simplified version of Kubernetes designed for running 
+									containerized applications in resource-constrained environments, such as edge 
+									computing, IoT devices, or small-scale deployments. It includes all the core 
+									Kubernetes features but removes or reduces unnecessary dependencies 
+									to improve performance and make it easier to set up and manage.</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Grid Two -->
+		<section id="two" class="grid-one">
+			<div class="grid-container">
+					<div class="grid-heading">
+						<p>Featured Projects</p>
+						<hr/>
 					</div>
-				</article>
-			</section>
-
-		<!-- One -->
-			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="research.html">
-										<img src="images/research.png" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>Aims Loading ...</p>
-										<h2><a href="research.html" style="color:black">Research</a></h2>
-									</header>
-									<p> Chemistry Research Loading ...</p>
-									<footer class="align-center">
-										<a href="research.html" class="button alt">Learn More</a>
-									</footer>
-								</div>
+				<ul class="grid-style">
+					<li class="grid-box">
+						<a href="project_1.html">
+							<div class="box-padding">
+								<img class="grid-image" src="assets/images/screwdriver-stand.png" alt=""/>
+								<hr/>
+								<h1>Rotating Screwdriver Stand</h1>
+								<p> This rotating precision driver stand allows for smooth rotation and ease of 
+									driver selection. It features a ball-bearing mechanism for fluid motion and 
+									increased accuracy in applications like electronics repair or fine assembly work.</p>
 							</div>
-						</div>
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="resources.html">
-										<img src="images/resources.png" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p>Resources Loading ...</p>
-										<h2><a href="resources.html" style="color:black">Resources</a></h2>
-									</header>
-									<p> ctm lab is interested in the development of research tools. These tools are free and downloadable here!</p>
-									<footer class="align-center">
-										<a href="resources.html" class="button alt">Learn More</a>
-									</footer>
-								</div>
+						</a>
+					</li>
+					<li class="grid-box">
+						<a href="project_1.html">
+							<div class="box-padding">
+								<img class="grid-image" src="assets/images/bit_case.png" alt=""/>
+								<hr/>
+								<h1>Parametric Clamshell Case</h1>
+								<p>This is a cloth-wrapped, hard-sided clamshell case for drill bit storage. 
+									The clamshell design is parametric, allowing for the size of the hard 
+									shell case to be altered to fit your needs.</p>
 							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>Chemistry Loading ...</p>
-						<h2> </h2>
-					</header>
-				</div>
-			</section>
-
-		<!-- More -->
-			<section id="More" class="wrapper style2">
-				<div class="inner">
-					<div class="grid-style">
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="members.html">
-										<img src="images/members.jpg" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p></p>
-										<h2><a href="members.html" style="color:black">Members</a></h2>
-									</header>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="publications.html">
-										<img src="images/publications.jpg" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p></p>
-										<h2><a href="publications.html" style="color:black">Publications</a></h2>
-									</header>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="resources.html">
-										<img src="images/resources.jpg" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p></p>
-										<h2><a href="resources.html" style="color:black">Resources</a></h2>
-									</header>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="social_media.html">
-										<img src="images/social_media.jpg" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p></p>
-										<h2><a href="social_media.html" style="color:black">Social Media</a></h2>
-									</header>
-								</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="box">
-								<div class="image fit">
-									<a href="contact.html">
-										<img src="images/social_media.jpg" alt="" />
-									</a>
-								</div>
-								<div class="content">
-									<header class="align-center">
-										<p></p>
-										<h2><a href="contact.html" style="color:black">Contact</a></h2>
-									</header>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
 
 		<!-- Footer -->
-			<!-- footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					&copy; Lucas Busta. All rights reserved.
-				</div>
-		</footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="" target="_blank" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/SquintClimpt" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				&copy; Cotomic Labs. All rights reserved.
+			</div>
+		</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Scripts-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-	</body>
+    </body>    
 </html>
