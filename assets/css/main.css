@@ -15,6 +15,16 @@ hr {
     width: 50%;
 }
 
+a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1f8335;
+}
+
 /* Header */
 
 #header {
@@ -223,13 +233,12 @@ hr {
 /* Banner */
 
 .banner-section {
-    margin: 3.25rem;
-    padding: 0;
+    padding-top: 3.25rem;
 }
 
     .banner-image {
         width: 100%;
-        height: 400px;
+        height: 300px;
         background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
         position: absolute;
         left: 0;
@@ -241,25 +250,39 @@ hr {
     .banner-text {
         position: relative;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-family: 'Courier New', Courier, monospace;
         font-weight: 600;
         color:#FFF;
-        padding-top: 150px;
-        padding-bottom: 125px;
+        padding-top: 7.033rem;
+        padding-bottom: 7.033rem;
     }
 
 /* Grid One */
 
+.grid-one {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
 .grid-heading {
     position: relative;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     color:#FFF;
-    padding-top: 10px;
 }
+
+.grid-heading > p > a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.grid-heading > p > a:hover {
+        color: #1f8335;
+}
+
 
 .grid-style {
     position: relative;
@@ -268,7 +291,6 @@ hr {
     justify-content:center;
     align-items: stretch;
     padding: 0;
-    margin: 0;
     margin-top: 2rem;
     list-style: none;
     gap: 20px;
@@ -287,7 +309,7 @@ hr {
         border-color: #FFF;
         padding: 5px;
         width: 400px;
-        height: auto;
+        height: 400px;
         font-weight: bold;
         font-size: 3em;
         box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.3);
@@ -305,7 +327,7 @@ hr {
         border-color: rgba(199, 199, 199, 0.75);
         padding: 5px;
         width: 400px;
-        height: auto;
+        height: 400px;
         font-weight: bold;
         font-size: 3em;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
@@ -317,9 +339,20 @@ hr {
 
     .grid-box > a > .box-padding {
         width: 90%;
+        height: 98%;
         margin: auto;
         text-align: center;
         color: #fff;
+        display: table;
+    }
+
+    .grid-box > a > .box-padding:hover {
+        color: rgba(199, 199, 199, 0.75);
+    }
+
+    .grid-box > a > .box-padding > .grid-see-more {
+        vertical-align: bottom;
+        display: table-row;
     }
 
     .box-padding > .grid-image {
@@ -351,7 +384,6 @@ hr {
 /* Footer */
 
 #footer {
-    margin-top: 5rem;
     margin-bottom: 0;
     text-align: center;
     background: rgba(0, 0, 0, 0.975);
@@ -418,77 +450,207 @@ hr {
 /* Blog */
 
 .blog {
-    margin-top: 6%;
+    padding-top: 0rem;
 }
 
-.blog-container {
-    background: rgba(0, 0, 0, 1);
-    border-radius: 0.25rem;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #FFF;
-    padding: 5px;
-    margin: 5%;
-    max-width: fit-content;
-    box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.3);
-    font-size: 1.25rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    display: inherit;
+    .blog-container {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 0.25rem;
+        border-style: solid;
+        border-width: 2px;
+        padding: 5px;
+        margin: 5%;
+        box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.3);
+        font-family: 'Courier New', Courier, monospace;
+        display: inherit;
+    }
+
+        .blog-container > .section.level1 > h1 {
+            position: relative;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color:#FFF;
+            padding-top: 20px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > h1 {
+            position: relative;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color:#FFF;
+            padding-top: 20px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > h2 {
+            position: relative;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-bottom: 10px;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > .portrait-heading {
+            position: relative;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .blog-container > .section.level1 > .section.level3 > h3 {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > .section.level3 > h3 {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-bottom: 0.25rem;
+        }
+
+        .blog-container > .section.level1 > .section.level3 > h4 {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .blog-container > .section.level1 > p {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: 5px;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > p {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: 5px;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > .section.level3 > p {
+            position: relative;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color:#FFF;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: 5px;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > p > img {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 0.25rem;
+        }
+
+        .blog-container > .section.level1 > .section.level2 > p > .portrait {
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 0.1rem;
+            width: 40%;
+        }
+
+/* Contact */
+
+.form-group {
+    margin-bottom: 1rem;
 }
 
-.blog-container > .section.level1 > h1 {
-    position: relative;
-    text-align: center;
-    font-size: 1.25rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    color:#FFF;
-    padding-top: 20px;
-}
-
-.blog-container > .section.level1 > .section.level3 > h3 {
-    position: relative;
-    text-align: left;
-    font-size: 1.0rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    color:#FFF;
-    padding-left: 5%;
-    margin: 0;
-}
-
-.blog-container > .section.level1 > .section.level2 > h2 {
-    position: relative;
-    text-align: left;
-    font-size: 1.2rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    color:#FFF;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 25px;
-    margin-bottom: 10px;
-}
-
-.blog-container > .section.level1 > .section.level2 > p {
-    position: relative;
-    text-align: left;
-    font-size: 0.95rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    color:#FFF;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 5px;
-    max-width: 1500px;
-}
-
-.blog-container > .section.level1 > .section.level2 > p > img {
-    position: relative;
+.form-group > label {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
-    height: auto;
+    margin-bottom: 0.5rem;
+    margin-left: 2.5%;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.form-group > input {
+    width: 95%;
+    align-content: center;
+    padding: 0.8rem;
+    margin-left: 2.5%;
+    border: 1px solid rgba(199, 199, 199, 0.75);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-group > textarea {
+    resize: vertical;
+    width: 95%;
+    min-height: 140px;
+    padding: 0.8rem;
+    margin-left: 2.5%;
+    border: 1px solid rgba(199, 199, 199, 0.75);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-group > .error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none; /* Hidden by default */
+}
+
+#contactForm > .submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    width: 95%;
+    padding: 0.75rem;
+    margin-left: 2.5%;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contactForm > .submit-button:hover {
+    background-color: #1f8335;
 }
