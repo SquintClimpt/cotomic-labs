@@ -301,6 +301,10 @@ a:hover {
 
     .grid-box > a {
         text-decoration: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .grid-box {
@@ -310,59 +314,86 @@ a:hover {
         border-width: 2px;
         border-color: #FFF;
         width: 400px;
+        min-height: 350px;
         box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.3);
         font-family: 'Courier New', Courier, monospace;
-        display: inherit;
+        display: flex;
     }
 
     .grid-box:hover {
         background: rgba(0, 0, 0, 0.975);
-        border-radius: 0.25rem;
-        border-style: solid;
-        border-width: 2px;
         border-color: rgba(199, 199, 199, 0.75);
-        width: 400px;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         cursor: pointer;
-        font-family: 'Courier New', Courier, monospace;
     }
 
     .grid-box > a > .box-padding {
-        min-height: 350px;
         height: auto;
-        text-align: center;
-        color: #fff;
-        display: table;
-        padding: 1rem;
+        align-items: center;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
     }
 
-    .grid-box > a > .box-padding:hover {
+    .grid-box:hover > a > .box-padding {
         color: rgba(199, 199, 199, 0.75);
     }
 
-    .grid-box > a > .box-padding > .grid-see-more {
-        vertical-align: bottom;
-        display: table-row;
-        font-size: 1.2rem;
+    .grid-box > a > .grid-see-more {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: relative;
+        text-align: center;
     }
 
-    .box-padding > .grid-image {
+    .grid-box > a > .grid-see-more > p {
+        font-size: 1.2rem;
+        color: #FFF;
+        margin: 0;
+    }
+
+    .grid-box:hover > a > .grid-see-more > p {
+        color: rgba(199, 199, 199, 0.75);
+    }
+
+    .box-padding > .grid-image-guide {
         width: 80%;
-        height: 5rem;
+        height: 100px;
         object-fit: contain;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .box-padding > .grid-image-project {
+        width: 80%;
+        height: 220px;
+        object-fit: contain;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(199, 199, 199, 0.75);
     }
 
     .box-padding > hr {
         width: 80%;
-        margin-top: 10px;
         margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .grid-box:hover > a > .box-padding > hr {
+        color: rgba(199, 199, 199, 0.75);
     }
 
     .box-padding > h1 {
         padding-top: 10px;
+        margin: 0;
         font-size: 1.2rem;
         font-weight: 700;
     }
