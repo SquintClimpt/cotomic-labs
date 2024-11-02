@@ -274,6 +274,11 @@ a:hover {
     color:#FFF;
 }
 
+.grid-heading > p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
 .grid-heading > p > a {
     color: #28a745;
     text-decoration: none;
@@ -368,19 +373,27 @@ a:hover {
         margin-bottom: 1rem;
     }
 
-    .box-padding > .grid-image-project {
-        width: 80%;
-        height: 220px;
-        object-fit: contain;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+    .box-padding > .image-fill {
         border-radius: 2px;
         border-width: 1px;
         border-style: solid;
         border-color: rgba(199, 199, 199, 0.75);
+        width: 80%;
+        height: 220px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
     }
 
+    .box-padding > .image-fill > .grid-image-project {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
     .box-padding > hr {
         width: 80%;
         margin-bottom: 10px;
@@ -396,6 +409,7 @@ a:hover {
         margin: 0;
         font-size: 1.2rem;
         font-weight: 700;
+        text-align: center;
     }
 
     .box-padding > p {
