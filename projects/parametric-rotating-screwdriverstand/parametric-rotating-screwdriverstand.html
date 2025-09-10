@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		    <meta charset="utf-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		    <link rel="stylesheet" href="../../assets/css/main.css" />
+		    <title>Cotomic Labs</title>
+    </head>
+    <body>
+        <!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="../../index.html">Cotomic Labs<span></span></a></div>
+			<a href="#menu"></a>
+		</header>
+
+		<!-- Nav Sidebar-->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../guides.html">Guides</a></li>
+				<li><a href="../../projects.html">Projects</a></li>
+				<li><a href="../../contact.html">Contact</a></li>
+				<li><a href="../../about.html">About</a></li>
+			</ul>	
+		</nav>
+
+        <!-- Banner -->
+		 <section class="banner-section">
+			<img class="banner-image" src="../../assets/images/banner_gradient_01.png" alt=""/>
+			<div class="banner-text">
+				<p>Guides</p>
+			</div>
+		</section>
+
+        <!-- Blog -->
+		<section class="blog">
+			<div class="blog-container">
+							              <div id="rotating-screwdriver-stand"
+              class="section level1">
+              <h1>Rotating Screwdriver Stand</h1>
+              <div id="clint-mccue" class="section level3">
+              <h3>Clint McCue</h3>
+              </div>
+              <div id="section" class="section level3">
+              <h3>8/01/2025</h3>
+              </div>
+              <div id="parametrics-and-openscad" class="section level2">
+              <h2>Parametrics and OpenSCAD</h2>
+              <p>This model has been designed in <a
+              href="https://openscad.org/">OpenSCAD</a>, and open-source
+              software that markets itself as “The Programmers Solid 3D
+              CAD Modeler”.</p>
+              <p>Due to the nature of object based programming with
+              OpenSCAD, parametrizing a model is a breeze. This allows
+              for nearly unlimited configurations within the bounds of
+              the software and the models physics.</p>
+              <p>Below is a brief guide on using the parameters of the
+              model to create your own, custom screwdriver stand.</p>
+              <p><img src="screwdriver-stand.png" /></p>
+              <h1>
+              <a
+              href="https://www.printables.com/model/1410371-parametric-screwdriver-stand">CLICK
+              HERE TO DOWNLOAD</a>
+              </h1>
+              <hr />
+              </div>
+              <div id="using-the-parameters-to-design-your-model"
+              class="section level2">
+              <h2>Using the parameters to “design” your model</h2>
+              <p>Since this model is parameterized, the specifications
+              can be changed to fit nearly whatever size or shape you
+              need it to be.</p>
+              <p>Below you can find a list of parameters that can be
+              modified within OpenSCAD to modulate the look and function
+              of the stand.</p>
+              </div>
+              <div id="main-parameters" class="section level2">
+              <h2>Main Parameters</h2>
+              <p><strong>1. View:</strong> Allows for switching between
+              different perspectives of the model, for this model you
+              can see the complete model, just the base section, top
+              section, the holes that will be cut into the model, labels
+              that can be embossed/engraved into the top, and an easy to
+              print label view.</p>
+              <p><strong>2. Label:</strong> Changes label to either
+              embossed or engraved.</p>
+              <p><strong>3. Introspec:</strong> Maybe not the best
+              descriptor for this function, setting this parameter to
+              true will allow a function to check whether the
+              screwdriver holes will intersect (bad!) and will throw an
+              error if that is true.</p>
+              <p><strong>4. Preview Resolution:</strong> Allows for
+              quicker modelling, I usually set to 50 when modelling a
+              circular object.</p>
+              <p><strong>5. Render Resolution:</strong> Resolution used
+              when the model is converted to an STL. (More is usually
+              better! Will take longer though..)</p>
+              <p><strong>6. Base Radius:</strong> The maximum horizontal
+              radius for the model</p>
+              <p><strong>7. Base Height:</strong> Height of the lower
+              section</p>
+              <p><strong>8. Mid Height:</strong> Height of the middle
+              section (below the angled bit)</p>
+              <p><strong>9. Top Radius:</strong> The horizontal radius
+              of the smaller topmost section (Changing this value will
+              set the angle of the top “cone”)</p>
+              <p><strong>10. Top Height:</strong> Total height of the
+              topmost section</p>
+              <p><strong>11. Driver Holders:</strong> Number of
+              screwdriver holes needed</p>
+              <p><strong>12. Driver Depth:</strong> Depth of each
+              screwdriver holder (This should be written in list format,
+              for ex. [1, 2, 3, 4] if you chose to have four screwdriver
+              holes)</p>
+              <p><strong>13. Driver Holder Depth:</strong> Max depth of
+              the screwdriver holes.</p>
+              <p><strong>14. Driver Holder Radii:</strong> Radius for
+              each holder, If all holes are the same size just type one
+              number: [10], if there are multiple size holes, the radius
+              of each can be denoted as [1, 2, 3] with as many values as
+              there are holes defined above.</p>
+              <p><strong>15. Driver Holder Vertical Placement:</strong>
+              Placement of screwdriver holder (Lower value = lower text,
+              higher value = higher text).</p>
+              <p><strong>16. Text Labels:</strong> Text for each
+              holder.</p>
+              <p><strong>17. Text Vertical Placement:</strong> Text
+              height adjustment (Lower value = lower text, higher value
+              = higher text)</p>
+              <p><strong>18. Image Labels:</strong> Image for each
+              holder. These are setup to accept .dxf labels, there are a
+              number of labels included in the download folder.</p>
+              <p><strong>19. Image Vertical Placement:</strong> Label
+              image height adjustment (Lower value = lower text, higher
+              value = higher text).</p>
+              <p><strong>20. Text Depth:</strong> Overall height of the
+              text labels. (Needs to be a larger number than that of the
+              text cutout depth)</p>
+              <p><strong>21. Text Cutout Depth:</strong> Depth of the
+              text labels for engraving.</p>
+              <p><strong>22. Text Character Spacing:</strong> Spacing
+              between characters of a single label</p>
+              <p><strong>23. Bearing Outer Radius:</strong> Should be
+              self-explanatory</p>
+              <p><strong>24. Bearing Inner Radius:</strong> Also should
+              be self-explanatory</p>
+              <p><strong>25. Bearing Height:</strong> The height, of the
+              bearing</p>
+              <p><strong>26. Bearing Height Gap:</strong> Gap between
+              the base and the top section.</p>
+              </div>
+              <div id="additional-parameters" class="section level2">
+              <h2>Additional Parameters</h2>
+              <p><strong>1. Base Height Fillet:</strong> Base height
+              before fillet (Percent).</p>
+              <p><strong>2. Base Angle Fillet:</strong> Angle of base
+              fillet (Percent).</p>
+              <p><strong>3. Top Rim Width:</strong> Width of top rim
+              (Percent).</p>
+              <p><strong>4. Top Indent:</strong> Top circular indent
+              (Percent).</p>
+              <p><strong>5. Text Font:</strong> Text font family.</p>
+              <p><strong>6. Text Style:</strong> Text font style
+              (Regular, Bold, Italic, Bold Italic).</p>
+              <p><strong>7. Text Font Size:</strong> Text font size.</p>
+              <p><strong>8. Label Print Spacing:</strong> Horizontal and
+              vertical space between each label.</p>
+              <p><strong>9. Label Print Columns:</strong> Number of
+              columns for 3D Printing of text.</p>
+              <p><strong>10. Label Print Character Spacing:</strong>
+              Spacing in between characters for 3D printing of text.</p>
+              <p><strong>11. Sector Area Overlap Adjustment:</strong>
+              Screwdriver cylinder sector area calculation adjustment
+              overlap (Increasingly large base_radius’ may need to
+              increase this).</p>
+              <p><strong>12. Image Scaling:</strong> Self explanatory I
+              hope.</p>
+              </div>
+              <div id="considerations" class="section level2">
+              <h2>2. Considerations</h2>
+              <div id="press-fit-characters" class="section level3">
+              <h3>Press Fit Characters</h3>
+              <p>I had some issues with fitting the small printed
+              characters into the recessed holes on the top of the
+              stand. Since the printed letters and numbers are
+              press-fit, they needed to be slightly smaller than the
+              hole they are to fit into. I couldn’t figure out a way to
+              make the characters smaller in OpenSCAD, so I used my
+              slicer to reduce the layer size. (Scaling the characters
+              doesn’t work if the characters have negative space in the
+              middle, like o, 8, 0, T, H).</p>
+              </div>
+              </div>
+              </div>
+							</div>
+		</section>
+
+        <!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="" target="_blank" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/SquintClimpt" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				&copy; Cotomic Labs. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Scripts-->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/skel.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+    </body>
+</html>

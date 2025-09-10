@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		    <meta charset="utf-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		    <link rel="stylesheet" href="../../assets/css/main.css" />
+		    <link rel="stylesheet" href="../../assets/css/fontawesome.css" />
+            <link rel="stylesheet" href="../../assets/css/regular.css" />
+            <link rel="stylesheet" href="../../assets/css/brands.css" />
+            <link rel="stylesheet" href="../../assets/css/solid.css" />
+            <title>Cotomic Labs</title>
+    </head>
+    <body>
+        <!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="../../index.html">Cotomic Labs<span></span></a></div>
+			<a href="#menu"></a>
+		</header>
+
+		<!-- Nav Sidebar-->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../guides.html">Guides</a></li>
+				<li><a href="../../projects.html">Projects</a></li>
+				<li><a href="../../contact.html">Contact</a></li>
+				<li><a href="../../about.html">About</a></li>
+			</ul>	
+		</nav>
+
+        <!-- Banner -->
+		 <section class="banner-section">
+			<img class="banner-image" src="../../assets/images/banner_gradient_01.png" alt=""/>
+			<div class="banner-text">
+				<p>Guides</p>
+			</div>
+		</section>
+
+        <!-- Blog -->
+		<section class="blog">
+			<div class="blog-container">
+							              <div id="setting-up-k3s" class="section level1">
+              <h1>Setting Up K3S for the Lab</h1>
+              <div id="clint-mccue" class="section level4">
+              <h4>Clint McCue</h4>
+              </div>
+              <div id="section" class="section level4">
+              <h4>10/31/2024</h4>
+              </div>
+              <div id="considerations" class="section level2">
+              <h2>Considerations</h2>
+              <p>Much of this document has been lifted and paraphrased
+              from the official k3s documentation that can be found
+              here: <a href="https://docs.k3s.io/">k3s</a>.</p>
+              </div>
+              <div id="getting-started" class="section level2">
+              <h2>1. Getting Started</h2>
+              <p>Kubernetes (K8s) is a powerful but complex system for
+              running cloud applications - K3s is like its streamlined
+              sibling, designed to be much simpler while keeping the
+              important features. Created by Rancher Labs, K3s packs
+              everything you need into a single file smaller than 40MB,
+              making it perfect for scenarios where resources are
+              limited, like development environments or edge computing
+              devices. It comes with essential tools pre-installed and
+              can run on hardware as modest as a Raspberry Pi, requiring
+              just 512MB of RAM and 1 CPU. For tech teams looking to get
+              started with container orchestration without the
+              complexity of full Kubernetes, K3s offers a
+              production-ready solution that’s easier to manage and
+              maintain.</p>
+              <p>The first step to installing and running a K3s cluster
+              involves choosing an operating system that can handle K3s.
+              I choose Ubuntu for its simplicity, ease of use, and
+              continuing security updates. A guide for installing the
+              latest version of Ubuntu can be found <a
+              href="https://squintclimpt.github.io/cotomic-labs/guides/setting-up-ubuntu/post.html">here</a>.</p>
+              </div>
+              <div id="starting-control-plane" class="section level2">
+              <h2>2. Starting Control Plane</h2>
+              <p>Setting up a K3s cluster is as easy as starting a
+              control plane by calling the base install script from
+              k3s.io:</p>
+              <pre><code type="text" id="code-1">curl -sfL https://get.k3s.io | sh -</code><span class="clipboard" onclick="copyFunction()"></span></pre>
+              <p>This command will download all necessary packages and
+              dependencies for K3s. It will also start the control plane
+              on the computer that the command was run on.</p>
+              </div>
+              <div id="starting-agent-nodes" class="section level2">
+              <h2>3. Starting Agent Nodes</h2>
+              <p>To add additional nodes, which K3s calls “agent nodes”,
+              run this command on the computer that will be added to the
+              cluster:</p>
+              <pre><code>curl -sfL https://get.k3s.io | K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken sh -</code></pre>
+              <div id="k3s_url" class="section level3">
+              <h3>K3S_URL</h3>
+              <p>The <code>K3S_URL</code> variable should be set to the
+              local IP of the control plane computer when starting the
+              cluster. the easiest way to find the local IP in ubuntu is
+              to use the command:</p>
+              <pre><code>hostname -I</code></pre>
+              <p>The output should look something like:</p>
+              <pre><code>192.168.0.354 172.54.2.5 10.40.5.1</code></pre>
+              <p>Most computers use the IP address range 192.168.0.0 to
+              192.168.255.255 for local IP identification. In this case,
+              the computer is reachable on the local network (the
+              network that is not facing the internet) at an IP of
+              192.168.0.354.</p>
+              </div>
+              <div id="k3s_token" class="section level3">
+              <h3>K3S_TOKEN</h3>
+              <p>The <code>K3S_TOKEN</code> variable is used as a
+              passkey to verify that the agent node trying to attach to
+              the k3s cluster is a valid agent. The
+              <code>K3S_TOKEN</code> for the cluster can be found on the
+              control plane computer (the computer that the initial k3s
+              cluster was started on) by navigating to
+              <code>/var/lib/rancher/k3s/server/node-token</code>.</p>
+              </div>
+              </div>
+              <div id="verifying-install" class="section level2">
+              <h2>4. Verifying Install</h2>
+              <p>Now that the control plane and agent nodes have been
+              started, lets check to make sure everything is up and
+              running correctly on the control plane computer with the
+              command:</p>
+              <pre><code>sudo systemctl status k3s</code></pre>
+              <p>if the k3s service is running, then we should see next
+              to the “Active:” row, “active (running)”:</p>
+              <p><img src="figure_1.jpg" /></p>
+              <p>The next step is to verify the presence of our agent
+              nodes. All we need to do is run the command:</p>
+              <pre><code>sudo kubectl get nodes</code></pre>
+              <p>(We use sudo here to run kubectl commands because this
+              function is only accessible by the root user)</p>
+              <p>The output should show the names, status, roles, age,
+              and version of each node in your cluster. the control
+              plane computer will have “control plane,master” roles, and
+              your agent nodes will have “worker” roles assigned:</p>
+              <p><img src="figure_2.jpg" /></p> 
+              <p>If all looks correct, then congrats! K3s is up and running, 
+              but there are no services running or attached. The next step is to start a
+              deployment within the cluster, our guide on starting a
+              simple deployment in K3s can be found <a href="">here</a>.</p>
+              </div>
+              </div>
+							</div>
+		</section>
+
+        <!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="" target="_blank" class="fa-brands fa-youtube"><span class="label"></span></a></li>
+					<li><a href="" target="_blank" class="fa-brands fa-instagram"><span class="label"></span></a></li>
+					<li><a href="https://github.com/SquintClimpt" target="_blank" class="fa-brands fa-github"><span class="label"></span></a></li>
+					<li><a href="" target="_blank" class="fa-solid fa-envelope"><span class="label"></span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				&copy; Cotomic Labs. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Scripts-->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/skel.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+        <script src="../../assets/js/copy.js"></script>
+    </body>
+</html>
